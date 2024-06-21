@@ -117,12 +117,12 @@ function Review({ local }) {
     dots: false,
     infinite: true,
     centerMode: true,
-    rtl: false,
+    rtl: local == "ar" ?true :false,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: local == "rus" ? 3 : 0,
-    afterChange: (current) => setActiveSlide(current),
+    afterChange: (current) => {setActiveSlide(current);console.log(current)},
   };
 
   const settingsForSmallScreen = {
@@ -141,7 +141,7 @@ function Review({ local }) {
     },
     {
       img: "/assets/reviews/studen.png",
-      title: t("title_in_review+2"),
+      title: t("title_in_review_2"),
       text: t("text_in_review_2"),
     },
     {
@@ -168,7 +168,7 @@ function Review({ local }) {
       >
         <div
           className={` border-[2px] overflow-hidden border-[#6D2663] rounded-full p-8 flex items justify-center   `}
-        >
+        >           
           <Image
             src={item.img}
             alt={"student"}
@@ -185,6 +185,7 @@ function Review({ local }) {
         <div
           className={`${index == activeSlide ? "block" : " hidden "} w-1/2 `}
         >
+         
           <p className="text-sm font-normal text-center">{t(item.title)}</p>
           <p className="text-sm mt-2 text-center">{t(item.text)}</p>
           <div className="flex items-center justify-center gap-2 mt-2 mb-6">

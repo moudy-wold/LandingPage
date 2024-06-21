@@ -250,7 +250,7 @@ function ContactusInHome({ local }) {
 
             <Link
               href="/contact-us"
-              className="absolute top-[46%] right-[32%] bg-[#fff] text-[#14BDC6] text-sm font-semibold p-2 px-1 rounded-xl  hover:text-[#fff] hover:bg-[#14BDC6] border-2 border-[#14BDC6] transition-all duration-200"
+              className="absolute top-[48%] right-[32%] bg-[#fff] text-[#14BDC6] text-sm font-semibold p-1 px-3 rounded-xl  hover:text-[#fff] hover:bg-[#14BDC6] border-2 border-[#14BDC6] transition-all duration-200"
             >
               {t("contact_us")}
             </Link>

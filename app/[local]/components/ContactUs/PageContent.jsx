@@ -270,7 +270,7 @@ function Contactus({ local }) {
 
             <Link
               href="/contact-us"
-              className="absolute top-[46%] right-[32%] bg-[#25D366] text-[#fff] text-sm font-semibold p-2 px-1 rounded-xl  hover:text-[#25D366] hover:bg-[#fff] border-2 border-[#25D366] transition-all duration-200"
+              className="absolute top-[48%] right-[32%] bg-[#25D366] text-[#fff] text-sm font-semibold p-1 px-3 rounded-xl  hover:text-[#25D366] hover:bg-[#fff] border-2 border-[#25D366] transition-all duration-200"
             >
               {t("contact_us")}
             </Link>
