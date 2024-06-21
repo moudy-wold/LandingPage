@@ -23,7 +23,8 @@ function Hero({ local }) {
             style={{ direction: "rtl" }}
             className="hidden lg:grid grid-cols-1 md:grid-cols-2 gap-5"
           >
-            <div className="h-[600px] grid grid-cols-4 gap-5">
+            <div className="h-[600px] grid !grid-cols-4 gap-5">
+
               <div className="grid grid-rows-[40%_60%] gap-6 h-full">
                 <div className=" rounded-[40px]">
                   <Image
@@ -39,7 +40,7 @@ function Hero({ local }) {
 
               <div className="grid grid-rows-[55%_45%] gap-6 h-full">
                 <div className="bg-[#14BDC6] rounded-3xl flex items-end justify-center p-4">
-                  <p className="text-white  lg:text-xl ">
+                <p className={`text-white ${local == "rus" ? "text-sm" : "text-lg "} ${local == "en" &&" pb-6 xl:pb-0"} `}>
                     {t("our_students")} 3400+
                   </p>
                 </div>
@@ -61,16 +62,16 @@ function Hero({ local }) {
                   <span className="absolute w-full h-[2px] bg-[#F5F5F5] left-0 top-24"></span>
                   <span className="absolute w-full h-[2px] bg-[#F5F5F5] left-0 bottom-10"></span>
                 </div>
-                <div className="bg-white border-[2px] border-[#6D2663] rounded-[40px] flex items-end justify-center p-4">
-                  <p className="text-black text-xl ">
-                    {t("our_specialties")} 43+
+                <div className="bg-white border-[2px] border-[#6D2663] rounded-[40px] flex items-end justify-center p-3">
+                <p className={`text-black${local == "rus" ? "text-sm" : "text-lg "} `}>
+                    {t("our_specialties")} 200+
                   </p>
                 </div>
               </div>
 
               <div className="grid grid-rows-[55%_45%] gap-6 h-full">
-                <div className="bg-[#6D2663] rounded-3xl flex items-end justify-center p-4">
-                  <p className="text-white text-xl ">
+                <div className="bg-[#6D2663] rounded-3xl flex items-end justify-center p-3">
+                <p className={`text-white ${local == "rus" ? "text-sm" : "text-lg "}  ${local == "ar" && "lg:pb-8 xl:pb-0"}`}>
                     {t("our_universities")} 34+
                   </p>
                 </div>

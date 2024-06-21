@@ -239,7 +239,7 @@ function ContactusInHome({ local }) {
             </div>
           </div> */}
           
-          <div className=" !relative  w-[90%] h-[200px] mx-auto">
+          <div className="block lg:hidden !relative  w-[90%] h-[200px] mx-auto">
           <Image
               src="/assets/contact-us/in home.png"
               alt="contact"

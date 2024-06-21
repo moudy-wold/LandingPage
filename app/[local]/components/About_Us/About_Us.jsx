@@ -49,11 +49,11 @@ function About_Us({ local }) {
               </div>
 
               <div className="lg:min-h-[220px]">
-                <p className="  text-[10px] lg:text-[15px] uppercase leading-[20px] lg:leading-none">
+                <p className="  text-[10px] lg:text-[13px] 2xl:text-[15px] uppercase lg:leading-[15px] 2xl:leading-none">
                   {" "}
                   {t("Secound_text_in_about_us")}
                 </p>
-                <p className="hidden lg:block text-[15px] mt-9 uppercase ">
+                <p className="hidden lg:block lg:text-[13px] 2xl:text-[15px] lg:mt-3  lg:leading-[15px] 2xl:leading-none 2xl:mt-9 uppercase ">
                   {t("Third_text_in_about_us")}
                 </p>
               </div>
