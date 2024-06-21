@@ -7,6 +7,22 @@ import Link from "next/link";
 function Footer({ local }) {
   const { t, i18n } = useTranslation(local, "common");
   const [ready, setReady] = useState(false);
+  const [tab, setTab] = useState(1);
+
+
+
+  const handleMoveToSection = (id) => {
+    setTab(id);
+    if (id == 1) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else if (id == 2) {
+      window.scrollTo({ top: 800, behavior: "smooth" });
+    } else if (id == 3) {
+      window.scrollTo({ top: 1400, behavior: "smooth" });
+    } else if (id == 4) {
+      window.scrollTo({ top: 3250, behavior: "smooth" });
+    }
+  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -138,25 +154,25 @@ function Footer({ local }) {
               <div className="grid grid-cols-4  mt-3">
                 <p
                   onClick={() => handleMoveToSection(1)}
-                  className={`p-1 ${local == "ar" ? "pl-5" :  "pr-10"}  hover:bg-[#14BDC6] rounded-3xl text-start text-white text-sm transition-all duration-200 cursor-pointer`}
+                  className={`p-1 ${local == "ar" ? "pl-5" :  "pr-10"}  rounded-3xl text-start text-white text-sm transition-all duration-200 cursor-pointer`}
                 >
                   {t("home_Title")}
                 </p>
                 <p
                   onClick={() => handleMoveToSection(2)}
-                  className={`p-1 px-1 hover:bg-[#14BDC6] rounded-3xl text-white text-sm   transition-all duration-200 cursor-pointer`}
+                  className={`p-1 px-1 rounded-3xl text-white text-sm   transition-all duration-200 cursor-pointer`}
                 >
                   {t("aboutUs_Title")}
                 </p>
                 <p
                   onClick={() => handleMoveToSection(3)}
-                  className={`p-1 px-5 hover:bg-[#14BDC6] rounded-3xl text-white text-sm  transition-all duration-200 cursor-pointer`}
+                  className={`p-1 px-5 rounded-3xl text-white text-sm  transition-all duration-200 cursor-pointer`}
                 >
                   {t("services_Title")}
                 </p>
                 <p
                   onClick={() => handleMoveToSection(4)}
-                  className={`p-1 ${local == "ar" ? "pr-8" :  "pl-11"} hover:bg-[#14BDC6] rounded-3xl text-white text-sm  transition-all duration-200 cursor-pointer`}
+                  className={`p-1 ${local == "ar" ? "pr-8" :  "pl-11"} rounded-3xl text-white text-sm  transition-all duration-200 cursor-pointer`}
                 >
                   {t("blog_Title")}
                 </p>
