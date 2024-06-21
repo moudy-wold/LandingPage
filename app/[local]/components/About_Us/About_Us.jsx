@@ -26,7 +26,8 @@ function About_Us({ local }) {
               </p>
             </div>
 
-            <div className="flex items-center justify-between gap-2 lg:gap-5 mt-5">
+            <div className="flex  justify-between gap-2 lg:gap-5 mt-5">
+
               <div className="hidden lg:block !min-w-[365px] min-h-[220px] ">
                 <Image
                   src="/assets/about-us/in about.jpg"
@@ -36,6 +37,7 @@ function About_Us({ local }) {
                   className="!w-[365px] !h-[220px]  "
                 />
               </div>
+
               <div className="block lg:hidden !min-w-[165px] !h-[120px] lg:!min-h-[220px] ">
                 <Image
                   src="/assets/about-us/in about.jpg"
@@ -46,8 +48,8 @@ function About_Us({ local }) {
                 />
               </div>
 
-              <div className="lg:min-h-[220px]">
-                <p className=" text-[10px] lg:text-[15px] uppercase">
+              <div className=" lg:min-h-[220px]">
+                <p className="  text-[10px] lg:text-[15px] uppercase">
                   {" "}
                   {t("Secound_text_in_about_us")}
                 </p>

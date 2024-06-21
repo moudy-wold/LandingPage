@@ -142,9 +142,9 @@ function Contactus({ local }) {
 
         <div className="absolute top-[20%] right-[10%]  bg-black w-4 h-4 rounded-full "></div>
 
-        <div className="absolute top-[38%] right-[19%]  bg-black w-4 h-4 rounded-full "></div>
+        <div className="absolute top-[38%] right-[13%]  bg-black w-4 h-4 rounded-full "></div>
 
-        <div className="absolute top-[26%] right-[22%] z-50">
+        <div className="absolute top-[26%] right-[17%] z-50">
           <Image
             src="/assets/contact-us/hat.svg"
             alt="hat"
@@ -156,7 +156,7 @@ function Contactus({ local }) {
 
         <Link
           href="https://api.whatsapp.com/send?phone=905539100031"
-          className="absolute top-[30%] right-[26%] bg-[#25D366] text-white text-3xl font-semibold p-7 px-4 rounded-xl  hover:text-[#25D366] hover:bg-white border-2 border-[#25D366] transition-all duration-200"
+          className="absolute top-[30%] right-1/2 translate-x-1/2 bg-[#25D366] text-white text-3xl font-semibold p-7 px-4 rounded-xl  hover:text-[#25D366] hover:bg-white border-2 border-[#25D366] transition-all duration-200"
         >
           WHATSAPP
         </Link>

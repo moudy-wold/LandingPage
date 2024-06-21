@@ -97,7 +97,7 @@ function Blog({ local }) {
                 <Link href={`/blog/${item.url}`} className="">
                   <div className="bg-white rounded-full p-2 lg:p-3 flex items-center justify-center hover:scale-110 transition-all duration-200 ">
                     <Image
-                      src="/assets/blog/Arrow1.svg"
+                      src="/assets/blog/arrow1.svg"
                       alt="arrow"
                       width={45}
                       height={45}

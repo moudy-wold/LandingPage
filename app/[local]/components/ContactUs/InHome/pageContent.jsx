@@ -62,7 +62,7 @@ function ContactusInHome({ local }) {
 
             <Link
               href="/contact-us"
-              className="absolute top-[52%] right-[38%] bg-[#25D366] text-white text-3xl font-semibold p-7 px-10 rounded-xl  hover:text-[#25D366] hover:bg-white border-2 border-[#25D366] transition-all duration-200"
+              className="absolute top-[52%] right-[38%] bg-[#14BDC6] text-white text-3xl font-semibold p-7 px-10 rounded-xl  hover:text-[#25D366] hover:bg-white border-2 border-[#25D366] transition-all duration-200"
             >
               {t("contact_us")}
             </Link>
@@ -144,7 +144,7 @@ function ContactusInHome({ local }) {
 
             <div className="absolute top-[20%] right-[10%]  bg-black w-4 h-4 rounded-full "></div>
 
-            <div className="absolute top-[38%] right-[19%]  bg-black w-4 h-4 rounded-full "></div>
+            <div className="absolute top-[38%] right-[12%]  bg-black w-4 h-4 rounded-full "></div>
 
             <div className="absolute top-[26%] right-[22%] z-50">
               <Image
@@ -158,7 +158,7 @@ function ContactusInHome({ local }) {
 
             <Link
               href="/contact-us"
-              className="absolute top-[30%] right-[26%] bg-[#25D366] text-white text-3xl font-semibold p-7 px-4 rounded-xl  hover:text-[#25D366] hover:bg-white border-2 border-[#25D366] transition-all duration-200"
+              className="absolute top-[30%] right-[26%] bg-[#14BDC6] text-white text-3xl font-semibold p-7 px-4 rounded-xl  hover:text-[#25D366] hover:bg-white border-2 border-[#25D366] transition-all duration-200"
             >
               {t("contact_us")}
             </Link>
