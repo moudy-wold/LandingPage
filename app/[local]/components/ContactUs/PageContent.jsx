@@ -247,7 +247,7 @@ function Contactus({ local }) {
       </div> */}
 
          
-      <div className=" !relative  w-[90%] h-[200px] mx-auto">
+      <div className="block lg:hidden !relative  w-[90%] h-[200px] mx-auto">
       <Link
           href="https://www.facebook.com/ecigrouptr/"
           className="absolute top-[4%] right-[0%] bg-[#3B579D] p-4 px-5 flex items-center justify-center rounded-full transition-all duration-200 hover:scale-110"

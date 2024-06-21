@@ -1,7 +1,6 @@
 "use client";
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import Slider from "react-slick";
 import Marquee from "react-fast-marquee";
 function Univercities({ local }) {
   const heroSliderSettings = {
@@ -111,12 +110,20 @@ function Univercities({ local }) {
     );
   });
   return (
-    <div className="p-5 mt-10 border-y-[1px] border-[#110F0F]  ">
+    <div className="p-5 mt-10 border-y-[1px] border-[#110F0F]  "
+    style={{direction:"ltr"}}
+    >
       <div className="h-fit my-auto">
         {/* <Slider {...heroSliderSettings}>{sliderItems}</Slider> */}
-        <Marquee className="w-full !h-[150px]" pauseOnHover={true} play={play}>
-            {data.map((item,index) => (
-              <div key={index} className="!relative items-center !h-[120px] !flex p-1">
+        <Marquee 
+        loop={10}
+        
+        className="w-full !h-[150px]" pauseOnHover={true} play={play}>
+          {data.map((item, index) => (
+            <div
+              key={index}
+              className="!relative items-center !h-[120px] !flex p-1"
+            >
               <Image
                 src={item.img}
                 width={100}
@@ -125,8 +132,8 @@ function Univercities({ local }) {
                 className="mx-10 "
               />
             </div>
-            ))}
-          </Marquee>
+          ))}
+        </Marquee>
       </div>
     </div>
   );
