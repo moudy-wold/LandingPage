@@ -7,7 +7,7 @@ function CustomNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`!hidden md:!block customNextArrow  absolute top-1/2 right-10 rotate-180  cursor-pointer bg-[#6D2663] rounded-full p-4 px-6  `}
+      className={`!hidden md:!block customNextArrow  absolute top-1/3 right-10 rotate-180  cursor-pointer bg-[#6D2663] rounded-full p-4 px-6  `}
       style={{
         ...style,
       }}
@@ -33,7 +33,7 @@ function CustomPrevArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`hidden md:block customPrevArrow absolute left-10 top-1/2 cursor-pointer z-50 bg-[#6D2663] rounded-full p-4 px-6 `}
+      className={`hidden md:block customPrevArrow absolute left-10 top-1/3 cursor-pointer z-50 bg-[#6D2663] rounded-full p-4 px-6 `}
       style={{}}
       onClick={onClick}
     >
@@ -289,7 +289,7 @@ function Review({ local }) {
   });
 
   return (
-    <div className="p-5 mt-12">
+    <div className="p-5 mt-12 px-5 lg:px-11">
       {ready && (
         <>
           <div className="">

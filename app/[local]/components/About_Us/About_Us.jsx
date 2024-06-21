@@ -48,8 +48,8 @@ function About_Us({ local }) {
                 />
               </div>
 
-              <div className=" lg:min-h-[220px]">
-                <p className="  text-[10px] lg:text-[15px] uppercase">
+              <div className="lg:min-h-[220px]">
+                <p className="  text-[10px] lg:text-[15px] uppercase leading-[20px] lg:leading-none">
                   {" "}
                   {t("Secound_text_in_about_us")}
                 </p>

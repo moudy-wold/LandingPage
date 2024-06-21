@@ -1,15 +1,18 @@
 "use client";
-import React from "react";
+import React,{useState} from "react";
 import Image from "next/image";
 import Slider from "react-slick";
-
+import Marquee from "react-fast-marquee";
 function Univercities({ local }) {
   const heroSliderSettings = {
     dots: false,
-    infinite: false,
-    autopaly: false,
     slidesToScroll: 2,
     arrows: false,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    infinite: true,
+    cssEase: "ease",
     responsive: [
       {
         breakpoint: 650,
@@ -37,6 +40,7 @@ function Univercities({ local }) {
       },
     ],
   };
+  const [play, setPlay] = useState(true);
   const data = [
     {
       img: "/assets/univercities/alt.png",
@@ -95,7 +99,7 @@ function Univercities({ local }) {
   ];
   let sliderItems = data.map((item, index) => {
     return (
-      <div key={index} className="!relative items-center !h-[130px] !flex p-1">
+      <div key={index} className="!relative items-center !h-[120px] !flex p-1">
         <Image
           src={item.img}
           width={100}
@@ -109,7 +113,20 @@ function Univercities({ local }) {
   return (
     <div className="p-5 mt-10 border-y-[1px] border-[#110F0F]  ">
       <div className="h-fit my-auto">
-        <Slider {...heroSliderSettings}>{sliderItems}</Slider>
+        {/* <Slider {...heroSliderSettings}>{sliderItems}</Slider> */}
+        <Marquee className="w-full !h-[150px]" pauseOnHover={true} play={play}>
+            {data.map((item,index) => (
+              <div key={index} className="!relative items-center !h-[120px] !flex p-1">
+              <Image
+                src={item.img}
+                width={100}
+                height={100}
+                alt={item.title}
+                className="mx-10 "
+              />
+            </div>
+            ))}
+          </Marquee>
       </div>
     </div>
   );

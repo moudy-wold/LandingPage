@@ -19,18 +19,19 @@ function ContactusInHome({ local }) {
         <>
           {/* Start LArge Screen */}
           <div className="relative hidden md:block w-[900px] h-[450px] mx-auto ">
-            <Link
-              href="https://www.facebook.com/ecigrouptr/"
-              className="absolute top-[4%] right-[12%] bg-[#3B579D] p-6 px-9 flex items-center justify-center rounded-full transition-all duration-200 hover:scale-110"
+            <div
+              className="absolute top-[4%] right-[12%] bg-[#F26B67]  p-3 py-4 border-[1px] border-[#110F0F]  flex items-center justify-center rounded-full transition-all duration-200"
             >
-              <Image
-                src="/assets/contact-us/facebook.svg"
-                alt="facebook"
-                height={40}
-                width={40}
+            
+            <Image
+                src="/assets/contact-us/zahrafehOrange.png"
+                alt="icon"
+                height={100}
+                width={110}
                 className=""
               />
-            </Link>
+           
+            </div>
 
             <div className="bg-[#eee] absolute top-[15%] right-[36%] rounded-full border-[2px] border-[#14BDC6] w-16 h-16"></div>
             <div className="absolute top-[4%] left-[8%] ">
@@ -44,12 +45,12 @@ function ContactusInHome({ local }) {
             </div>
 
             <div className="absolute top-[34%] left-[20%]  bg-black w-8 h-8 rounded-full "></div>
-            <div className="absolute top-[38%] left-[24%] z-50 bg-[#6D2663] py-2 pb-3 px-16 font-semibold uppercase text-white text-center text-2xl rounded-2xl -rotate-[20deg]">
+            <div className="absolute top-[42%] left-[14%] z-50 bg-[#6D2663] py-2 pb-3 px-16 font-semibold uppercase text-white text-center text-2xl rounded-2xl -rotate-[20deg]">
               {t("start_your_journey")}
             </div>
 
             <div className="absolute top-[34%] right-[30%] bg-black w-5 h-5 rounded-full "></div>
-            <div className="absolute top-[44%] right-[12%]  bg-black w-3 h-3 rounded-full "></div>
+            <div className="absolute top-[49%] right-[15%]  bg-black w-4 h-4 rounded-full "></div>
             <div className="absolute top-[42%] right-[34%] z-50">
               <Image
                 src="/assets/contact-us/hat.svg"
@@ -62,7 +63,7 @@ function ContactusInHome({ local }) {
 
             <Link
               href="/contact-us"
-              className="absolute top-[52%] right-[38%] bg-[#14BDC6] text-white text-3xl font-semibold p-7 px-10 rounded-xl  hover:text-[#25D366] hover:bg-white border-2 border-[#25D366] transition-all duration-200"
+              className="absolute top-[52%] right-[38%] bg-[#fff] text-[#14BDC6] text-3xl font-semibold p-7 px-10 rounded-xl  hover:text-[#fff] hover:bg-[#14BDC6] border-2 border-[#14BDC6] transition-all duration-200"
             >
               {t("contact_us")}
             </Link>
@@ -89,15 +90,19 @@ function ContactusInHome({ local }) {
                   ? "https://www.instagram.com/ecigroupint?igsh=d2hjbW05amdleTNi&utm_source=qr"
                   : "https://www.instagram.com/ecigrouptr?igsh=MWswaTBhazl2a3o1Yw%3D%3D&utm_source=qr"
               }
-              className="absolute bottom-[10%] right-[25%] bg-[#6D2663] rounded-full px-10 py-2 transition-all duration-200 hover:scale-110"
+              className="absolute bottom-[0%] right-[25%] transition-all duration-200 hover:scale-110"
             >
+              <div className=" bg-[#000] rounded-full px-10 py-3">
+
               <Image
                 src="/assets/contact-us/instegram.svg"
                 alt="hat"
                 width={50}
                 height={50}
                 className=""
-              />
+                />
+                </div>
+                <p className=" text-black text-2xl text-center">{t("follow_us")}</p>
             </Link>
 
             <div className="absolute bottom-[8%] left-[15%] py-5 px-16 rotate-[20deg] bg-[#F26B67] rounded-2xl  font-semibold tracking-wider text-2xl text-white text-center uppercase">

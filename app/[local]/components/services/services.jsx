@@ -68,7 +68,7 @@ function Services({ local }) {
               >
                 <div className="overflow-hidden">
                   <div className="w-full  my-6 pb-2">
-                    <div className="flex flex-wrap justify-center items-end gap-6">
+                    <div className="flex flex-wrap justify-center items-center gap-6">
                       <p className="lg:text-xl px-4 lg:px-0 lg:w-1/2 ">
                         {t("desc_for_registration_in_universities")}
                       </p>
@@ -129,7 +129,7 @@ function Services({ local }) {
               >
                 <div className="overflow-hidden">
                   <div className="w-full  my-4 pb-2">
-                    <div className="flex flex-wrap justify-center items-end gap-6">
+                    <div className="flex flex-wrap justify-center items-center gap-6">
                       <p className=" lg:text-xl px:4 lg:px-0 lg:w-1/2">
                         {t("desc_for_equivalency_and_translation")}
                       </p>
@@ -190,7 +190,7 @@ function Services({ local }) {
               >
                 <div className="overflow-hidden">
                   <div className="w-full  my-4 pb-2">
-                    <div className="flex flex-wrap justify-center items-end gap-6">
+                    <div className="flex flex-wrap justify-center items-center gap-6">
                       <p className="lg:text-xl px:4 lg:px-0 lg:w-1/2">
                         {t("desc_for_reception_from_the_airport")}
                       </p>
@@ -251,7 +251,7 @@ function Services({ local }) {
               >
                 <div className="overflow-hidden">
                   <div className="w-full  my-4 pb-2">
-                    <div className="flex flex-wrap justify-center items-end gap-6">
+                    <div className="flex flex-wrap justify-center items-center gap-6">
                       <p className="lg:text-xl px:4 lg:px-0 lg:w-1/2">
                         {t("desc_for_student_residence_permit")}
                       </p>

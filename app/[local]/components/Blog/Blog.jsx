@@ -110,7 +110,7 @@ function Blog({ local }) {
           </div>
           <Link
             href="#"
-            className="absolute bottom-4 left-4 lg:bottom-7 lg:left-7  text-white lg:text-xl"
+            className="absolute bottom-4 left-4 lg:bottom-7 lg:left-7  text-white lg:text-xl uppercase min-h-[50px]"
           >
             {item.title}
           </Link>
@@ -119,7 +119,7 @@ function Blog({ local }) {
     );
   });
   return (
-    <div className="px-5 lg:px-10 lg:py-10 mt-12 lg:mt-10">
+    <div className="px-5 lg:px-11 lg:py-10 mt-12 lg:mt-10">
       {ready && (
         <>
           <div className="">

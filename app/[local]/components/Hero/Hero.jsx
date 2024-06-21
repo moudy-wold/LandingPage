@@ -96,7 +96,7 @@ function Hero({ local }) {
                   <p className="-mt-[20px]">INSPIRATION</p>
                 </h1>
               </div>
-              <div className="mt-5">
+              <div className="mt-7">
                 <Link
                   href="/contact-us"
                   className="bg-[#110F0F] text-white hover:bg-[#14BDC6] transition-all duration-200 py-[10px] rounded-2xl text-center w-full block uppercase"
@@ -112,7 +112,7 @@ function Hero({ local }) {
           <div className="block lg:hidden">
             <div className="grid grid-cols-[48%_25%_25%] gap-1 h-40 ">
               <div className="bg-[#6D2663] rounded-3xl flex items-end justify-start p-4">
-                <p className={`text-white  text-xs ${local == "ar" && "pb-2"}`} >
+                <p className={`text-white  text-xs pb-3`} >
                   {t("our_universities")} <br />34+
                 </p>
               </div>
