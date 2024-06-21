@@ -117,10 +117,11 @@ function Review({ local }) {
     dots: false,
     infinite: true,
     centerMode: true,
-    rtl: local == "ar" ? true : false,
+    rtl: false,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    initialSlide: local == "rus" ? 3 : 0,
     afterChange: (current) => setActiveSlide(current),
   };
 
@@ -135,23 +136,23 @@ function Review({ local }) {
   const data = [
     {
       img: "/assets/reviews/studen-1.png",
-      title: t("title_in_review"),
-      text: t("text_in_review"),
+      title: t("title_in_review_1"),
+      text: t("text_in_review_1"),
     },
     {
       img: "/assets/reviews/studen.png",
-      title: t("title_in_review"),
-      text: t("text_in_review"),
+      title: t("title_in_review+2"),
+      text: t("text_in_review_2"),
     },
     {
       img: "/assets/reviews/1.png",
-      title: t("title_in_review"),
-      text: t("text_in_review"),
+      title: t("title_in_review_3"),
+      text: t("text_in_review_3"),
     },
     {
       img: "/assets/reviews/studen-1.png",
-      title: t("title_in_review"),
-      text: t("text_in_review"),
+      title: t("title_in_review_4"),
+      text: t("text_in_review_4") ,
     },
   ];
   useEffect(() => {
@@ -163,6 +164,7 @@ function Review({ local }) {
       <div
         key={index}
         className="!overflow-hidden !flex items-center justify-center gap-2 h-[260px]  "
+        
       >
         <div
           className={` border-[2px] overflow-hidden border-[#6D2663] rounded-full p-8 flex items justify-center   `}
@@ -299,7 +301,8 @@ function Review({ local }) {
           </div>
 
           {/* Start  Large Screen */}
-          <div className="hidden lg:block reviews mt-5 lg:mt-10">
+          <div className="hidden lg:block reviews mt-5 lg:mt-10"
+          style={{direction:"ltr"}}>
             <Slider
               {...settingsForLargeScreen}
               prevArrow={<CustomPrevArrow />}

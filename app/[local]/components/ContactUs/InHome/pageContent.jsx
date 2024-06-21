@@ -18,7 +18,7 @@ function ContactusInHome({ local }) {
       {ready && (
         <>
           {/* Start LArge Screen */}
-          <div className="relative hidden md:block w-[900px] h-[450px] mx-auto ">
+          {/* <div className="relative hidden md:block w-[900px] h-[450px] mx-auto ">
             <div
               className="absolute top-[4%] right-[12%] bg-[#F26B67]  p-3 py-4 border-[1px] border-[#110F0F]  flex items-center justify-center rounded-full transition-all duration-200"
             >
@@ -111,11 +111,41 @@ function ContactusInHome({ local }) {
 
             <div className="absolute bottom-[6%] left-[45%] w-6 h-6 bg-black rounded-full"></div>
             <div className="absolute bottom-[10%] left-[55%] w-3 h-3 bg-black rounded-full"></div>
+          </div> */}
+
+          <div className=" !relative hidden lg:block w-[1200px] h-[600px] mx-auto">
+            <Image src="/assets/contact-us/in home.png" alt="contact" width={1600} height={600}  className="" />
+            <Link
+              href="/contact-us"
+              className="absolute top-[45%] right-[32%] bg-[#fff] text-[#14BDC6] text-3xl font-semibold p-7 px-24 rounded-xl  hover:text-[#fff] hover:bg-[#14BDC6] border-2 border-[#14BDC6] transition-all duration-200"
+            >
+              {t("contact_us")}
+            </Link>
+            <Link
+              href={
+                local == "res"
+                  ? "https://www.instagram.com/ecigroupint?igsh=d2hjbW05amdleTNi&utm_source=qr"
+                  : "https://www.instagram.com/ecigrouptr?igsh=MWswaTBhazl2a3o1Yw%3D%3D&utm_source=qr"
+              }
+              className="absolute bottom-[20%] right-[19%] transition-all duration-200 hover:scale-110"
+            >
+              <div className=" bg-[#000] rounded-full px-10 py-3">
+
+              <Image
+                src="/assets/contact-us/instegram.svg"
+                alt="hat"
+                width={50}
+                height={50}
+                className=""
+                />
+                </div>
+              
+            </Link>
           </div>
           {/* End Large Screen */}
 
           {/* Start Small Screen */}
-          <div className="relative w-full h-[450px] mx-auto block md:hidden">
+          {/* <div className="relative w-full h-[450px] mx-auto block md:hidden">
             <Link
               href="https://www.facebook.com/ecigrouptr/"
               className="absolute top-[4%] right-[0%] bg-[#3B579D] p-4 px-5 flex items-center justify-center rounded-full transition-all duration-200 hover:scale-110"
@@ -207,6 +237,43 @@ function ContactusInHome({ local }) {
                 {t("follow_us")}
               </p>
             </div>
+          </div> */}
+          
+          <div className=" !relative  w-[90%] h-[200px] mx-auto">
+          <Image
+              src="/assets/contact-us/in home.png"
+              alt="contact"
+              width={200}
+              height={200}
+              className="!w-full !h-full object-contain"
+            />
+
+            <Link
+              href="/contact-us"
+              className="absolute top-[46%] right-[32%] bg-[#fff] text-[#14BDC6] text-sm font-semibold p-2 px-1 rounded-xl  hover:text-[#fff] hover:bg-[#14BDC6] border-2 border-[#14BDC6] transition-all duration-200"
+            >
+              {t("contact_us")}
+            </Link>
+            <Link
+              href={
+                local == "res"
+                  ? "https://www.instagram.com/ecigroupint?igsh=d2hjbW05amdleTNi&utm_source=qr"
+                  : "https://www.instagram.com/ecigrouptr?igsh=MWswaTBhazl2a3o1Yw%3D%3D&utm_source=qr"
+              }
+              className="absolute bottom-[21%] right-[17%] transition-all duration-200 hover:scale-110"
+            >
+              <div className=" bg-[#000] rounded-full px-4 py-2">
+
+              <Image
+                src="/assets/contact-us/instegram.svg"
+                alt="hat"
+                width={20}
+                height={20}
+                className=""
+                />
+                </div>
+              
+            </Link>
           </div>
           {/* End Small Screen */}
         </>

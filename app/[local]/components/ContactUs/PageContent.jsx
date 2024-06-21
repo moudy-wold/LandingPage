@@ -16,7 +16,7 @@ function Contactus({ local }) {
   return (
     <div className="py-10 px-5 lg:px-10 ">
       {/* Start LArge Screen */}
-      <div className="relative hidden md:block w-[900px] h-[450px] mx-auto ">
+      {/* <div className="relative hidden md:block w-[900px] h-[450px] mx-auto ">
         <Link
           href="https://www.facebook.com/ecigrouptr/"
           className="absolute top-[4%] right-[12%] bg-[#3B579D] p-6 px-9 flex items-center justify-center rounded-full transition-all duration-200 hover:scale-110"
@@ -104,11 +104,57 @@ function Contactus({ local }) {
 
         <div className="absolute bottom-[6%] left-[45%] w-6 h-6 bg-black rounded-full"></div>
         <div className="absolute bottom-[10%] left-[55%] w-3 h-3 bg-black rounded-full"></div>
+      </div> */}
+
+      <div className=" !relative hidden lg:block w-[1200px] h-[600px] mx-auto">
+        <Link
+          href="https://www.facebook.com/ecigrouptr/"
+          className="absolute top-[4%] right-[12%] bg-[#3B579D] p-6 px-9 flex items-center justify-center rounded-full transition-all duration-200 hover:scale-110"
+        >
+          <Image
+            src="/assets/contact-us/facebook.svg"
+            alt="facebook"
+            height={40}
+            width={40}
+            className=""
+          />
+        </Link>
+        <Image
+          src="/assets/contact-us/in connect.png"
+          alt="contact"
+          width={1600}
+          height={600}
+          className=""
+        />
+        <Link
+          href="https://api.whatsapp.com/send?phone=905539100031"
+          className="absolute top-[45%] right-[32%] bg-[#25D366] text-[#fff] text-3xl font-semibold p-7 px-24 rounded-xl  hover:text-[#25D366] hover:bg-[#fff] border-2 border-[#25D366] transition-all duration-200"
+        >
+          WHATS APP
+        </Link>
+        <Link
+          href={
+            local == "res"
+              ? "https://www.instagram.com/ecigroupint?igsh=d2hjbW05amdleTNi&utm_source=qr"
+              : "https://www.instagram.com/ecigrouptr?igsh=MWswaTBhazl2a3o1Yw%3D%3D&utm_source=qr"
+          }
+          className="absolute bottom-[20%] right-[19%] transition-all duration-200 hover:scale-110"
+        >
+          <div className=" bg-[#000] rounded-full px-10 py-3">
+            <Image
+              src="/assets/contact-us/instegram.svg"
+              alt="hat"
+              width={50}
+              height={50}
+              className=""
+            />
+          </div>
+        </Link>
       </div>
       {/* End LArge Screen */}
 
       {/* Start Small Screen */}
-      <div className="relative w-full h-[450px] mx-auto block md:hidden">
+      {/* <div className="relative w-full h-[450px] mx-auto block md:hidden">
         <Link
           href="https://www.facebook.com/ecigrouptr/"
           className="absolute top-[4%] right-[0%] bg-[#3B579D] p-4 px-5 flex items-center justify-center rounded-full transition-all duration-200 hover:scale-110"
@@ -198,7 +244,57 @@ function Contactus({ local }) {
           </Link>
           <p className="text-center text-sm font-semibold">{t("follow_us")}</p>
         </div>
-      </div>
+      </div> */}
+
+         
+      <div className=" !relative  w-[90%] h-[200px] mx-auto">
+      <Link
+          href="https://www.facebook.com/ecigrouptr/"
+          className="absolute top-[4%] right-[0%] bg-[#3B579D] p-4 px-5 flex items-center justify-center rounded-full transition-all duration-200 hover:scale-110"
+        >
+          <Image
+            src="/assets/contact-us/facebook.svg"
+            alt="facebook"
+            height={20}
+            width={20}
+            className=""
+          />
+        </Link>
+          <Image
+              src="/assets/contact-us/in connect.png"
+              alt="contact"
+              width={200}
+              height={200}
+              className="!w-full !h-full object-contain"
+            />
+
+            <Link
+              href="/contact-us"
+              className="absolute top-[46%] right-[32%] bg-[#25D366] text-[#fff] text-sm font-semibold p-2 px-1 rounded-xl  hover:text-[#25D366] hover:bg-[#fff] border-2 border-[#25D366] transition-all duration-200"
+            >
+              {t("contact_us")}
+            </Link>
+            <Link
+              href={
+                local == "res"
+                  ? "https://www.instagram.com/ecigroupint?igsh=d2hjbW05amdleTNi&utm_source=qr"
+                  : "https://www.instagram.com/ecigrouptr?igsh=MWswaTBhazl2a3o1Yw%3D%3D&utm_source=qr"
+              }
+              className="absolute bottom-[21%] right-[17%] transition-all duration-200 hover:scale-110"
+            >
+              <div className=" bg-[#000] rounded-full px-4 py-2">
+
+              <Image
+                src="/assets/contact-us/instegram.svg"
+                alt="hat"
+                width={20}
+                height={20}
+                className=""
+                />
+                </div>
+              
+            </Link>
+          </div>
       {/* End Small Screen */}
     </div>
   );
