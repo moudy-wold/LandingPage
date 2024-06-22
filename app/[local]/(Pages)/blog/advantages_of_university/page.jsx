@@ -30,7 +30,7 @@ async function Page({ params: { local, slug } }) {
     <div className="px-5 lg:px-10 lg:mt-28 lg:grid grid-cols-2 gap-5">
       <div className="">
         <div>
-          <h1 className="uppercase w-2/3 lg:w-3/4 font-bold text-xl lg:text-[60px] leading-[50px] lg:leading-[50px]">
+          <h1 className=" lowercase w-2/3 lg:w-3/4 font-bold text-xl lg:text-[60px] leading-[50px] lg:leading-[50px]">
             {" "}
             {data[0].main_title_1}{" "}
           </h1>
@@ -45,17 +45,17 @@ async function Page({ params: { local, slug } }) {
           <p className="uppercase text-[10px] lg:text-[15px] ">{data[0].text_3_1}</p>
 
           <div className="hidden lg:block">
-            <h2 className="text-xl font-semibold mt-10">
+            <h2 className="lowercase text-xl font-semibold mt-10">
               {data[0].sub_title_1_1}
             </h2>
             <p className="uppercase text-[15px] !mt-3 ">{data[0].text_4_1}</p>
 
-            <h2 className="text-xl font-semibold mt-10">
+            <h2 className=" lowercasetext-xl font-semibold mt-10">
               {data[0].sub_title_2_1}
             </h2>
             <p className="uppercase text-[15px] !mt-3">{data[0].text_5_1}</p>
 
-            <h2 className="text-xl font-semibold mt-10">
+            <h2 className="lowercase text-xl font-semibold mt-10">
               {data[0].sub_title_3_1}
             </h2>
             <p className="uppercase text-[15px] !mt-3">{data[0].text_6_1}</p>
@@ -82,7 +82,7 @@ async function Page({ params: { local, slug } }) {
           />
         </div>
         <div className="hidden lg:block">
-          <h2 className="uppercase text-xl font-semibold mt-5">
+          <h2 className="lowercase text-xl font-semibold mt-5">
             {data[0].sub_title_4_1}
           </h2>
           <p className="uppercase text-[15px] !mt-3">{data[0].text_7_1}</p>
@@ -97,7 +97,7 @@ async function Page({ params: { local, slug } }) {
           </h2>
           <p className="uppercase text-[15px] !mt-3">{data[0].text_9_1}</p>
 
-          <h2 className="text-xl font-semibold mt-10">
+          <h2 className="lowercase text-xl font-semibold mt-10">
             {data[0].sub_title_7_1}
           </h2>
         </div>

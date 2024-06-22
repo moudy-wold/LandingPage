@@ -269,10 +269,10 @@ function Contactus({ local }) {
             />
 
             <Link
-              href="/contact-us"
+              href="https://api.whatsapp.com/send?phone=905539100031"
               className="absolute top-[48%] right-[32%] bg-[#25D366] text-[#fff] text-sm font-semibold p-1 px-3 rounded-xl  hover:text-[#25D366] hover:bg-[#fff] border-2 border-[#25D366] transition-all duration-200"
             >
-              {t("contact_us")}
+              WHATSAPP
             </Link>
             <Link
               href={

@@ -108,8 +108,7 @@ function Blog({ local }) {
               </div>
             )}
           </div>
-          <Link
-            href="#"
+          <Link href={`/blog/${item.url}`}
             className="absolute bottom-4 left-4 lg:bottom-7 lg:left-7  text-white lg:text-xl uppercase min-h-[50px]"
           >
             {item.title}

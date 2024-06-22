@@ -20,7 +20,7 @@ async function Page({ params: { local, slug } }) {
     <div className="px-5 lg:px-10 lg:mt-28 lg:grid grid-cols-2 gap-5">
       <div className="">
         <div>
-          <h1 className=" uppercase w-2/3  lg:w-full font-bold text-xl lg:text-[60px] leading-[20px] lg:leading-[55px]">
+          <h1 className=" lowercase w-2/3  lg:w-full font-bold text-xl lg:text-[60px] leading-[20px] lg:leading-[55px]">
             {" "}
             {data[0].main_title_3}{" "}
           </h1>
@@ -29,13 +29,13 @@ async function Page({ params: { local, slug } }) {
             {data[0].text_1_3}
           </p>
         <div className="hidden lg:block">
-          <h2 className="uppercase text-xl font-semibold mt-5">
+          <h2 className="lowercase text-xl font-semibold mt-5">
             {data[0].sub_title_1_3}
           </h2>
           <p className="uppercase text-[10px] lg:text-[15px] my-5 lg:my-5">
             {data[0].text_2_3}
           </p>
-          <h2 className="uppercase text-xl font-semibold mt-5">
+          <h2 className="lowercase text-xl font-semibold mt-5">
             {data[0].sub_title_2_3}
           </h2>
           <p className="uppercase text-[10px] lg:text-[15px] hidden lg:block">
@@ -63,7 +63,7 @@ async function Page({ params: { local, slug } }) {
           />
         </div>
         <div className="hidden lg:block">
-          <h2 className="uppercase text-xl font-semibold mt-5">
+          <h2 className="lowercase text-xl font-semibold mt-5">
             {data[0].sub_title_3_3}
           </h2>
 
@@ -71,7 +71,7 @@ async function Page({ params: { local, slug } }) {
         </div>
 
         <div className="block lg:hidden">
-          <h2 className="uppercase text-sm font-semibold ">
+          <h2 className="lowercase text-sm font-semibold ">
             {data[0].sub_title_1_3}
           </h2>
           <p className="uppercase text-[10px]  mt-[10px]">

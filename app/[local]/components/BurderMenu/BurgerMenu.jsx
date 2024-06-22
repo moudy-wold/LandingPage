@@ -1,9 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "../../../i18n/client";
+import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
+
 function BurgerMenu({ local }) {
   const { t, i18n } = useTranslation(local, "common");
   const [tab, setTab] = useState(0);
   const [ready, setReady] = useState(false);
+  const router = useRouter();
+  const pathName = usePathname();
+  const [inContact, setInContact] = useState(false);
+
+  useEffect(() => {
+    if (pathName) {
+      pathName.includes("contact-us")
+        ? setInContact(true)
+        : setInContact(false);
+    }
+  }, [pathName]);
 
   useEffect(() => {
     setTimeout(() => {
@@ -12,14 +26,30 @@ function BurgerMenu({ local }) {
   }, []);
   const handleMoveToSection = (id) => {
     setTab(id);
-    if (id == 1) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    } else if (id == 2) {
-      window.scrollTo({ top: 500, behavior: "smooth" });
-    } else if (id == 3) {
-      window.scrollTo({ top: 1130, behavior: "smooth" });
-    } else if (id == 4) {
-      window.scrollTo({ top: 3250, behavior: "smooth" });
+    if (!inContact) {
+      if (id == 1) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else if (id == 2) {
+        window.scrollTo({ top: 500, behavior: "smooth" });
+        localStorage.set("scroll", 0);
+      } else if (id == 3) {
+        window.scrollTo({ top: 1130, behavior: "smooth" });
+      } else if (id == 4) {
+        window.scrollTo({ top: 3250, behavior: "smooth" });
+      }
+    } else {
+      if (id == 1) {
+        router.back();
+      } else if (id == 2) {
+        localStorage.setItem("scroll", 500);
+        router.back();
+      } else if (id == 3) {
+        localStorage.setItem("scroll", 1130);
+        router.back();
+      } else if (id == 4) {
+        localStorage.setItem("scroll", 3250);
+        router.back();
+      }
     }
   };
   return (

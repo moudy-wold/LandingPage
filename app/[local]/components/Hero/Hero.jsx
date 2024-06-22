@@ -7,10 +7,18 @@ import Link from "next/link";
 function Hero({ local }) {
   const { t, i18n } = useTranslation(local, "common");
   const [ready, setReady] = useState(false);
-
+  const [isScroll, setIsScroll] = useState(false);
   useEffect(() => {
+    
     setTimeout(() => {
       setReady(true);
+      if (localStorage.getItem("scroll")) {
+        const scrollWidth = localStorage.getItem("scroll");
+        window.scrollTo({ top: scrollWidth, behavior: "smooth" });
+        console.log(scrollWidth)
+      }else{
+        console.log(false)
+      }
     }, 100);
   }, []);
 
@@ -24,7 +32,6 @@ function Hero({ local }) {
             className="hidden lg:grid grid-cols-1 md:grid-cols-2 gap-5"
           >
             <div className="h-[600px] grid !grid-cols-4 gap-5">
-
               <div className="grid grid-rows-[40%_60%] gap-6 h-full">
                 <div className=" rounded-[40px]">
                   <Image
@@ -40,7 +47,11 @@ function Hero({ local }) {
 
               <div className="grid grid-rows-[55%_45%] gap-6 h-full">
                 <div className="bg-[#14BDC6] rounded-3xl flex items-end justify-center p-4">
-                <p className={`text-white ${local == "rus" ? "text-sm" : "text-lg "} ${local == "en" &&" pb-6 xl:pb-0"} `}>
+                  <p
+                    className={`text-white ${
+                      local == "rus" ? "text-sm" : "text-lg "
+                    } ${local == "en" && " pb-6 xl:pb-0"} `}
+                  >
                     {t("our_students")} 3400+
                   </p>
                 </div>
@@ -63,7 +74,11 @@ function Hero({ local }) {
                   <span className="absolute w-full h-[2px] bg-[#F5F5F5] left-0 bottom-10"></span>
                 </div>
                 <div className="bg-white border-[2px] border-[#6D2663] rounded-[40px] flex items-end justify-center p-3">
-                <p className={`text-black${local == "rus" ? "text-sm" : "text-lg "} `}>
+                  <p
+                    className={`text-black${
+                      local == "rus" ? "text-sm" : "text-lg "
+                    } `}
+                  >
                     {t("our_specialties")} 200+
                   </p>
                 </div>
@@ -71,7 +86,11 @@ function Hero({ local }) {
 
               <div className="grid grid-rows-[55%_45%] gap-6 h-full">
                 <div className="bg-[#6D2663] rounded-3xl flex items-end justify-center p-3">
-                <p className={`text-white ${local == "rus" ? "text-sm" : "text-lg "}  ${local == "ar" && "lg:pb-8 xl:pb-0"}`}>
+                  <p
+                    className={`text-white ${
+                      local == "rus" ? "text-sm" : "text-lg "
+                    }  ${local == "ar" && "lg:pb-8 xl:pb-0"}`}
+                  >
                     {t("our_universities")} 34+
                   </p>
                 </div>
@@ -113,8 +132,9 @@ function Hero({ local }) {
           <div className="block lg:hidden">
             <div className="grid grid-cols-[48%_25%_25%] gap-1 h-40 ">
               <div className="bg-[#6D2663] rounded-3xl flex items-end justify-start p-4">
-                <p className={`text-white  text-xs pb-3`} >
-                  {t("our_universities")} <br />34+
+                <p className={`text-white  text-xs pb-3`}>
+                  {t("our_universities")} <br />
+                  34+
                 </p>
               </div>
               <div className=" rounded-[40px]">
@@ -128,7 +148,8 @@ function Hero({ local }) {
               </div>
               <div className="bg-[#14BDC6] rounded-3xl flex items-end justify-center p-4">
                 <p className="text-white text-xs ">
-                  {t("our_students")}<br /> 3400+
+                  {t("our_students")}
+                  <br /> 3400+
                 </p>
               </div>
             </div>
@@ -143,7 +164,8 @@ function Hero({ local }) {
               </div>
               <div className="bg-white border-[2px] border-[#6D2663] rounded-3xl flex items-end justify-center p-4">
                 <p className="text-black text-xs  ">
-                  {t("our_specialties")} <br />200+
+                  {t("our_specialties")} <br />
+                  200+
                 </p>
               </div>
               <div className="bg-[#F26B67] rounded-3xl"></div>

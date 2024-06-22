@@ -20,7 +20,7 @@ async function Page({ params: { local, slug } }) {
     <div className="px-5 lg:px-10 lg:mt-28 lg:grid grid-cols-2 gap-5">
       <div className="">
         <div>
-          <h1 className=" uppercase w-2/3  lg:w-full font-bold text-xl lg:text-[60px] leading-[20px] lg:leading-[55px]">
+          <h1 className="  lowercase w-2/3  lg:w-full font-bold text-xl lg:text-[60px] leading-[20px] lg:leading-[55px]">
             {" "}
             {data[0].main_title_2}{" "}
           </h1>
@@ -77,7 +77,7 @@ async function Page({ params: { local, slug } }) {
 
           <p className="uppercase text-[15px] !mt-3">{data[0].text_6_2}</p>
 
-          <h2 className="text-xl font-semibold mt-10">
+          <h2 className="text-xl font-semibold mt-10 lowercase ">
             {data[0].sub_title_1_2}
           </h2>
         </div>
