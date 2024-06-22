@@ -75,17 +75,17 @@ function Blog({ local }) {
   ];
   let sliderItems = data.map((item, index) => {
     return (
-      <div key={index} className="!relative !overflow-hidden !flex p-1 !w-full">
+      <div key={index} className="blog !relative !overflow-hidden !flex justify-end p-1 !w-full">
         <div className="w-[99%]">
           <Image
             src={item.img}
             alt={"asd"}
-            width={365}
-            height={370}
-            className="rounded-3xl lg:rounded-[40px] lg:!w-full h-[220px] lg:!h-[370px]"
+            width={310}
+            height={330}
+            className="rounded-3xl lg:rounded-[40px] lg:!w-[310px] h-[220px] lg:!h-[330px]"
           />
         </div>
-        <div className=" bg-[#110f0f4d] absolute top-1 left-1 z-50 w-[95%] lg:w-[97%] h-[97%] lg:h-[98%] rounded-[30px] lg:rounded-[40px] p-1">
+        <div className=" bg-[#110f0f4d] absolute top-1 right-1 z-50 w-[95%] lg:w-[96%] h-[97%] lg:h-[98%] rounded-[30px] lg:rounded-[40px] p-1">
           <div className=" p-3 ">
             {index == 0 ? (
               ""
@@ -118,7 +118,7 @@ function Blog({ local }) {
     );
   });
   return (
-    <div className="px-5 lg:px-11 lg:py-10 mt-12 lg:mt-10">
+    <div className="blog px-5 lg:px-11 lg:py-10 mt-12 lg:mt-10">
       {ready && (
         <>
           <div className="">

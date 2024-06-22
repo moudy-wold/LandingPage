@@ -10,7 +10,7 @@ function WhatsAppButton() {
   const [inContact, setInContact] = useState(false);
   useEffect(() => {
     if (pathName) {
-      pathName.includes("contact-us")
+      pathName.includes("contact-us") 
         ? setInContact(true)
         : setInContact(false);
     }
@@ -19,9 +19,13 @@ function WhatsAppButton() {
     <>
       {!inContact && (
         <div
-          className={` fixed z-50 bottom-3 right-3 lg:bottom-10 ${
+          className={` fixed z-50 bottom-3 lg:bottom-10 ${
             isBottom ? " lg:right-[180px] " : " lg:right-10"
-          } transition-all duration-200`}
+          } 
+          ${ 
+            isBottom ? " right-[110px] " : "right-3"
+          }
+          transition-all duration-200`}
         >
           <div className="block lg:hidden hover:scale-110 transition-all duration-200">
             <Link href="/contact-us" className="">

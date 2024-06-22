@@ -100,7 +100,7 @@ function Footer({ local }) {
                 <p className="text-white">E-mail: eci.group.tr@gmail.com</p>
                 <Link
                   href="/contact-us"
-                  className="mt-4 block py-[10px] px-10 text-xl text-center text-black bg-white rounded-3xl cursor-pointer hover:bg-[#14BDC6] hover:text-white transition-all duration-200"
+                  className="mt-4 uppercase block py-[10px] px-10 text-xl text-center text-black bg-white rounded-3xl cursor-pointer hover:bg-[#14BDC6] hover:text-white transition-all duration-200"
                 >
                   {t("contact_us")}
                 </Link>
@@ -212,7 +212,7 @@ function Footer({ local }) {
               <p className=" my-0 text-white">E-mail: eci.group.tr@gmail.com</p>
               <Link
                 href="/contact-us"
-                className="w-full mt-4 block  text-lg lg:text-xl text-center text-black bg-white rounded-3xl cursor-pointer hover:bg-[#14BDC6] hover:text-white transition-all duration-200"
+                className="w-full uppercase mt-4 block  text-lg lg:text-xl text-center text-black bg-white rounded-3xl cursor-pointer hover:bg-[#14BDC6] hover:text-white transition-all duration-200"
               >
                 {t("contact_us")}
               </Link>

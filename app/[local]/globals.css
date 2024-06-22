@@ -2,16 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .reviews.slick-slide.slick-active{
-    width:360px! important;
-}
-.reviews.slick-slide.slick-active.slick-center.slick-current{
-    width:750px! important;
-} */
- /* .custom-select {
-  @apply text-xs p-0 m-0;
-}
+ 
 
-.custom-option {
-  @apply text-[10px] my-0 p-0;
-} */
+.blog .slick-slide.slick-active {
+  display: flex! important;
+  justify-content: end! important;
+
+}
