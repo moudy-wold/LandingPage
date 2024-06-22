@@ -117,7 +117,7 @@ function ContactusInHome({ local }) {
             <Image src="/assets/contact-us/in home.png" alt="contact" width={1600} height={600}  className="" />
             <Link
               href="/contact-us"
-              className="absolute top-[45%] right-[32%] bg-[#fff] text-[#14BDC6] text-3xl font-semibold p-7 px-24 rounded-xl  hover:text-[#fff] hover:bg-[#14BDC6] border-2 border-[#14BDC6] transition-all duration-200"
+              className="absolute top-[45%] right-[32%] bg-[#fff] text-[#14BDC6] text-3xl font-semibold p-7 px-32 underline rounded-xl  hover:text-[#fff] hover:bg-[#14BDC6] border-2 border-[#14BDC6] transition-all duration-200"
             >
               {t("contact_us")}
             </Link>
@@ -250,7 +250,7 @@ function ContactusInHome({ local }) {
 
             <Link
               href="/contact-us"
-              className="absolute top-[48%] right-[32%] bg-[#fff] text-[#14BDC6] text-sm font-semibold p-1 px-3 rounded-xl  hover:text-[#fff] hover:bg-[#14BDC6] border-2 border-[#14BDC6] transition-all duration-200"
+              className="absolute top-[48%] right-[31%] bg-[#fff] text-[#14BDC6] text-sm font-semibold p-1 px-4 rounded-xl underline hover:text-[#fff] hover:bg-[#14BDC6] border-2 border-[#14BDC6] transition-all duration-200"
             >
               {t("contact_us")}
             </Link>

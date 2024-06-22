@@ -3,55 +3,60 @@ import { useTranslation } from "../../../i18n/client";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 
-function BurgerMenu({ local }) {
+function BurgerMenu({ local, setOpenBurgerMenu }) {
   const { t, i18n } = useTranslation(local, "common");
   const [tab, setTab] = useState(0);
   const [ready, setReady] = useState(false);
   const router = useRouter();
   const pathName = usePathname();
-  const [inContact, setInContact] = useState(false);
+  const [inHome, setInHome] = useState(false);
 
   useEffect(() => {
     if (pathName) {
-      pathName.includes("contact-us")
-        ? setInContact(true)
-        : setInContact(false);
+      pathName.includes("contact-us") || pathName.includes("blog") 
+        ? setInHome(false)
+        : setInHome(true);
     }
   }, [pathName]);
+  const handleMoveToSection = (id) => {    
+    setOpenBurgerMenu(false);
+    setTab(id);
+    if (inHome) {
+      console.log("as")
+      if (id == 1) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else if (id == 2) {
+        window.scrollTo({ top: 490, behavior: "smooth" });
+      } else if (id == 3) {
+        window.scrollTo({ top: 1130, behavior: "smooth" });
+      } else if (id == 4) {
+        window.scrollTo({ top: 2850, behavior: "smooth" });
+      }
+    } else {
+      if (id == 1) {
+        router.back();
+      } else if (id == 2) {
+        localStorage.removeItem("scroll");
+        localStorage.setItem("scroll", 480);
+        router.back();
+      } else if (id == 3) {
+        localStorage.removeItem("scroll");
+        localStorage.setItem("scroll", 1020);
+        router.back();
+      } else if (id == 4) {
+        localStorage.removeItem("scroll");
+         localStorage.setItem("scroll", 2800)
+        router.back();
+      }
+    }
+    setTab(0);
+  };
 
   useEffect(() => {
     setTimeout(() => {
       setReady(true);
     }, 100);
   }, []);
-  const handleMoveToSection = (id) => {
-    setTab(id);
-    if (!inContact) {
-      if (id == 1) {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      } else if (id == 2) {
-        window.scrollTo({ top: 500, behavior: "smooth" });
-        localStorage.set("scroll", 0);
-      } else if (id == 3) {
-        window.scrollTo({ top: 1130, behavior: "smooth" });
-      } else if (id == 4) {
-        window.scrollTo({ top: 3250, behavior: "smooth" });
-      }
-    } else {
-      if (id == 1) {
-        router.back();
-      } else if (id == 2) {
-        localStorage.setItem("scroll", 500);
-        router.back();
-      } else if (id == 3) {
-        localStorage.setItem("scroll", 1130);
-        router.back();
-      } else if (id == 4) {
-        localStorage.setItem("scroll", 3250);
-        router.back();
-      }
-    }
-  };
   return (
     <div className=" mt-5">
       {ready && (

@@ -9,8 +9,6 @@ function Footer({ local }) {
   const [ready, setReady] = useState(false);
   const [tab, setTab] = useState(1);
 
-
-
   const handleMoveToSection = (id) => {
     setTab(id);
     if (id == 1) {
@@ -154,7 +152,9 @@ function Footer({ local }) {
               <div className="grid grid-cols-4  mt-3">
                 <p
                   onClick={() => handleMoveToSection(1)}
-                  className={`p-1 ${local == "ar" ? "pl-5" :  "pr-10"}  rounded-3xl text-start text-white text-sm transition-all duration-200 cursor-pointer`}
+                  className={`p-1 ${
+                    local == "ar" ? "pl-5" : "pr-10"
+                  }  rounded-3xl text-start text-white text-sm transition-all duration-200 cursor-pointer`}
                 >
                   {t("home_Title")}
                 </p>
@@ -172,7 +172,9 @@ function Footer({ local }) {
                 </p>
                 <p
                   onClick={() => handleMoveToSection(4)}
-                  className={`p-1 ${local == "ar" ? "pr-8" :  "pl-11"} rounded-3xl text-white text-sm  transition-all duration-200 cursor-pointer`}
+                  className={`p-1 ${
+                    local == "ar" ? "pr-8" : "pl-11"
+                  } rounded-3xl text-white text-sm  transition-all duration-200 cursor-pointer`}
                 >
                   {t("blog_Title")}
                 </p>
@@ -195,9 +197,12 @@ function Footer({ local }) {
             <div className="mt-5">
               <p className="text-white">WhatsApp: 00905539100031</p>
               <p className=" my-0 text-white">E-mail: eci.group.tr@gmail.com</p>
-              <button className="w-full mt-4 block  text-lg lg:text-xl text-black bg-white rounded-3xl cursor-pointer hover:bg-[#14BDC6] hover:text-white transition-all duration-200">
+              <Link
+                href="/contact-us"
+                className="w-full mt-4 block  text-lg lg:text-xl text-black bg-white rounded-3xl cursor-pointer hover:bg-[#14BDC6] hover:text-white transition-all duration-200"
+              >
                 {t("contact_us")}
-              </button>
+              </Link>
             </div>
             {/* End contact us */}
 
@@ -216,7 +221,14 @@ function Footer({ local }) {
                   {t("follow_us")}
                 </p>
                 <div className="flex items-center justify-between gap-5 mt-2">
-                  <Link href="/" className="">
+                  <Link
+                    href={
+                      local == "res"
+                        ? "https://www.instagram.com/ecigroupint?igsh=d2hjbW05amdleTNi&utm_source=qr"
+                        : "https://www.instagram.com/ecigrouptr?igsh=MWswaTBhazl2a3o1Yw%3D%3D&utm_source=qr"
+                    }
+                    className=""
+                  >
                     <Image
                       src="/assets/social medya/instegram.svg"
                       alt="instegram"
@@ -225,7 +237,10 @@ function Footer({ local }) {
                       className=""
                     />
                   </Link>
-                  <Link href="/" className="">
+                  <Link
+                    href="https://www.facebook.com/ecigrouptr/"
+                    className=""
+                  >
                     <Image
                       src="/assets/social medya/facebook.svg"
                       alt="facebook"

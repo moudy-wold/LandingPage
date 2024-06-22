@@ -15,6 +15,10 @@ function NavBar({ local }) {
   const [currentLocale, setCurrentLocale] = useState(local);
   const [openBurgerMenu, setOpenBurgerMenu] = useState(false);
   const [ready, setReady] = useState(false);
+  
+  const pathName = usePathname();
+  const [inHome, setInHome] = useState(false);
+
 
   useEffect(() => {
     setTimeout(() => {
@@ -28,19 +32,46 @@ function NavBar({ local }) {
     { id: 3, title: "RUS", value: "rus" },
   ];
 
-  const handleMoveToSection = (id) => {
-    setTab(id);
-    if (id == 1) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    } else if (id == 2) {
-      window.scrollTo({ top: 800, behavior: "smooth" });
-    } else if (id == 3) {
-      window.scrollTo({ top: 1400, behavior: "smooth" });
-    } else if (id == 4) {
-      window.scrollTo({ top: 3250, behavior: "smooth" });
+ useEffect(() => {
+    if (pathName) {
+      pathName.includes("contact-us") || pathName.includes("blog") 
+        ? setInHome(false)
+        : setInHome(true);
     }
+  }, [pathName]);
+  const handleMoveToSection = (id) => {    
+    setOpenBurgerMenu(false);
+    setTab(id);
+    if (inHome) {
+      console.log("as")
+      if (id == 1) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else if (id == 2) {
+        window.scrollTo({ top: 790, behavior: "smooth" });
+      } else if (id == 3) {
+        window.scrollTo({ top: 1360, behavior: "smooth" });
+      } else if (id == 4) {
+        window.scrollTo({ top: 3250, behavior: "smooth" });
+      }
+    } else {
+      if (id == 1) {
+        router.back();
+      } else if (id == 2) {
+        localStorage.removeItem("scroll");
+        localStorage.setItem("scroll", 790);
+        router.back();
+      } else if (id == 3) {
+        localStorage.removeItem("scroll");
+        localStorage.setItem("scroll", 1350);
+        router.back();
+      } else if (id == 4) {
+        localStorage.removeItem("scroll");
+         localStorage.setItem("scroll", 3200)
+        router.back();
+      }
+    }
+    setTab(0);
   };
-
   const handleLocaleChange = (newLocale) => {
     if (!currentPathname) return;
     const pathWithoutLocale = currentPathname.replace(/^\/[^\/]+/, "");
@@ -78,8 +109,8 @@ function NavBar({ local }) {
               <Image
                 src="/assets/logo.svg"
                 alt="logo"
-                width={65}
-                height={28}
+                width={100}
+                height={32}
                 className=""
               />
               </Link>
@@ -181,7 +212,7 @@ function NavBar({ local }) {
                 openBurgerMenu ? " left-0 block " : "hidden -left-full"
               } transition-all duration-200 w-full h-10 `}
             >
-              <BurgerMenu local={local}/>
+              <BurgerMenu local={local} setOpenBurgerMenu={setOpenBurgerMenu} />
             </div>
             {/* End Burger MEnu For Small Screen */}
           </div>

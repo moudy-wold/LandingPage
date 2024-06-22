@@ -7,19 +7,19 @@ import Link from "next/link";
 function Hero({ local }) {
   const { t, i18n } = useTranslation(local, "common");
   const [ready, setReady] = useState(false);
-  const [isScroll, setIsScroll] = useState(false);
-  useEffect(() => {
-    
+  
+  useEffect(() => {    
     setTimeout(() => {
       setReady(true);
       if (localStorage.getItem("scroll")) {
         const scrollWidth = localStorage.getItem("scroll");
-        window.scrollTo({ top: scrollWidth, behavior: "smooth" });
-        console.log(scrollWidth)
-      }else{
-        console.log(false)
+        window.scrollTo({ top: scrollWidth, behavior: "smooth" });        
       }
     }, 100);
+
+    setTimeout(()=>{
+      localStorage.removeItem("scroll")
+    },10000)
   }, []);
 
   return (
@@ -48,7 +48,7 @@ function Hero({ local }) {
               <div className="grid grid-rows-[55%_45%] gap-6 h-full">
                 <div className="bg-[#14BDC6] rounded-3xl flex items-end justify-center p-4">
                   <p
-                    className={`text-white ${
+                    className={`text-white text-end ${
                       local == "rus" ? "text-sm" : "text-lg "
                     } ${local == "en" && " pb-6 xl:pb-0"} `}
                   >
@@ -75,7 +75,7 @@ function Hero({ local }) {
                 </div>
                 <div className="bg-white border-[2px] border-[#6D2663] rounded-[40px] flex items-end justify-center p-3">
                   <p
-                    className={`text-black${
+                    className={`text-black text-end ${
                       local == "rus" ? "text-sm" : "text-lg "
                     } `}
                   >
@@ -87,8 +87,8 @@ function Hero({ local }) {
               <div className="grid grid-rows-[55%_45%] gap-6 h-full">
                 <div className="bg-[#6D2663] rounded-3xl flex items-end justify-center p-3">
                   <p
-                    className={`text-white ${
-                      local == "rus" ? "text-sm" : "text-lg "
+                    className={`text-white text-end ${
+                      local == "rus" ? "text-sm" : "text-lg"
                     }  ${local == "ar" && "lg:pb-8 xl:pb-0"}`}
                   >
                     {t("our_universities")} 34+
@@ -132,7 +132,7 @@ function Hero({ local }) {
           <div className="block lg:hidden">
             <div className="grid grid-cols-[48%_25%_25%] gap-1 h-40 ">
               <div className="bg-[#6D2663] rounded-3xl flex items-end justify-start p-4">
-                <p className={`text-white  text-xs pb-3`}>
+                <p className={`text-white  text-xs pb-3 `}>
                   {t("our_universities")} <br />
                   34+
                 </p>
