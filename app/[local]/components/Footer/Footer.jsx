@@ -36,7 +36,7 @@ function Footer({ local }) {
             <div className="flex justify-between items-start ">
               <h1 className="w-1/3 leading-[80px] text-white text-[60px] font-bold uppercase ">
                 {t("start")}
-                <br />
+              
                 {t("your_journey")}
                 <br />
                 {t("with_eci_group")}
@@ -98,9 +98,12 @@ function Footer({ local }) {
               <div className="">
                 <p className="text-white">WhatsApp: 00905539100031</p>
                 <p className="text-white">E-mail: eci.group.tr@gmail.com</p>
-                <button className="mt-4 block py-[10px] px-10 text-xl text-black bg-white rounded-3xl cursor-pointer hover:bg-[#14BDC6] hover:text-white transition-all duration-200">
+                <Link
+                  href="/contact-us"
+                  className="mt-4 block py-[10px] px-10 text-xl text-center text-black bg-white rounded-3xl cursor-pointer hover:bg-[#14BDC6] hover:text-white transition-all duration-200"
+                >
                   {t("contact_us")}
-                </button>
+                </Link>
               </div>
               {/* End contact us */}
 
@@ -110,7 +113,10 @@ function Footer({ local }) {
                   {t("follow_us")}
                 </p>
                 <div className="flex items-center justify-end gap-5 mt-5">
-                  <Link href="/" className="">
+                  <Link
+                    href="https://www.facebook.com/ecigrouptr/"
+                    className=""
+                  >
                     <Image
                       src="/assets/social medya/facebook.svg"
                       alt="facebook"
@@ -119,7 +125,14 @@ function Footer({ local }) {
                       className=""
                     />
                   </Link>
-                  <Link href="/" className="">
+                  <Link
+                    href={
+                      local == "res"
+                        ? "https://www.instagram.com/ecigroupint?igsh=d2hjbW05amdleTNi&utm_source=qr"
+                        : "https://www.instagram.com/ecigrouptr?igsh=MWswaTBhazl2a3o1Yw%3D%3D&utm_source=qr"
+                    }
+                    className=""
+                  >
                     <Image
                       src="/assets/social medya/instegram.svg"
                       alt="instegram"
@@ -199,7 +212,7 @@ function Footer({ local }) {
               <p className=" my-0 text-white">E-mail: eci.group.tr@gmail.com</p>
               <Link
                 href="/contact-us"
-                className="w-full mt-4 block  text-lg lg:text-xl text-black bg-white rounded-3xl cursor-pointer hover:bg-[#14BDC6] hover:text-white transition-all duration-200"
+                className="w-full mt-4 block  text-lg lg:text-xl text-center text-black bg-white rounded-3xl cursor-pointer hover:bg-[#14BDC6] hover:text-white transition-all duration-200"
               >
                 {t("contact_us")}
               </Link>

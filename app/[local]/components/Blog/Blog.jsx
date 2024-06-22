@@ -81,8 +81,8 @@ function Blog({ local }) {
             src={item.img}
             alt={"asd"}
             width={365}
-            height={420}
-            className="rounded-3xl lg:rounded-[40px] lg:!w-full h-[220px] lg:!h-[420px]"
+            height={370}
+            className="rounded-3xl lg:rounded-[40px] lg:!w-full h-[220px] lg:!h-[370px]"
           />
         </div>
         <div className=" bg-[#110f0f4d] absolute top-1 left-1 z-50 w-[95%] lg:w-[97%] h-[97%] lg:h-[98%] rounded-[30px] lg:rounded-[40px] p-1">
