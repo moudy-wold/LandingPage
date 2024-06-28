@@ -33,11 +33,11 @@ function Footer({ local }) {
       if (id == 1) {
         window.scrollTo({ top: 0, behavior: "smooth" });
       } else if (id == 2) {
-        window.scrollTo({ top: 790, behavior: "smooth" });
+        window.scrollTo({ top: 490, behavior: "smooth" });
       } else if (id == 3) {
-        window.scrollTo({ top: 1330, behavior: "smooth" });
+        window.scrollTo({ top: 1030, behavior: "smooth" });
       } else if (id == 4) {
-        window.scrollTo({ top: 3100, behavior: "smooth" });
+        window.scrollTo({ top: 2800, behavior: "smooth" });
       }
     } else {
       if (id == 1) {
