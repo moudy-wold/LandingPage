@@ -79,7 +79,7 @@ function Blog({ local }) {
         <div className="w-[99%]">
           <Image
             src={item.img}
-            alt={"asd"}
+            alt={"blog"}
             width={310}
             height={330}
             className="rounded-3xl lg:rounded-[40px] lg:!w-[310px] h-[220px] lg:!h-[330px]"

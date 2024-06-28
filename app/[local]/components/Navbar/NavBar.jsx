@@ -111,7 +111,7 @@ function NavBar({ local }) {
                 alt="logo"
                 width={100}
                 height={32}
-                className=""
+                className="!w-[85%] md:!w-[60%]"
               />
               </Link>
             </div>

@@ -3,23 +3,60 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "../../../i18n/client";
 import Image from "next/image";
 import Link from "next/link";
-
+import { usePathname, useRouter } from "next/navigation";
 function Footer({ local }) {
   const { t, i18n } = useTranslation(local, "common");
   const [ready, setReady] = useState(false);
   const [tab, setTab] = useState(1);
+  const router = useRouter();
 
+  const pathName = usePathname();
+  const [inHome, setInHome] = useState(false);
+  const [ isMobile, setIsMobile ] = useState(false);
+  useEffect(() => {
+    if (pathName) {
+      pathName.includes("contact-us") || pathName.includes("blog")
+        ? setInHome(false)
+        : setInHome(true);
+    }
+    if (window.innerWidth < 923) {
+      // setIsMobile(true)
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+      // setIsMobile(false)
+    }
+  }, [pathName]);
   const handleMoveToSection = (id) => {
     setTab(id);
-    if (id == 1) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    } else if (id == 2) {
-      window.scrollTo({ top: 800, behavior: "smooth" });
-    } else if (id == 3) {
-      window.scrollTo({ top: 1400, behavior: "smooth" });
-    } else if (id == 4) {
-      window.scrollTo({ top: 3250, behavior: "smooth" });
+    if (inHome) {
+      if (id == 1) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else if (id == 2) {
+        window.scrollTo({ top: 790, behavior: "smooth" });
+      } else if (id == 3) {
+        window.scrollTo({ top: 1330, behavior: "smooth" });
+      } else if (id == 4) {
+        window.scrollTo({ top: 3100, behavior: "smooth" });
+      }
+    } else {
+      if (id == 1) {
+        router.back();
+      } else if (id == 2) {
+        localStorage.removeItem("scroll");
+        localStorage.setItem("scroll", isMobile ? 400 : 780);
+        router.back();
+      } else if (id == 3) {
+        localStorage.removeItem("scroll");
+        localStorage.setItem("scroll", isMobile ? 990 : 1330);
+        router.back();
+      } else if (id == 4) {
+        localStorage.removeItem("scroll");
+        localStorage.setItem("scroll", isMobile ? 2800 : 3100);
+        router.back();
+      }
     }
+    setTab(0);
   };
 
   useEffect(() => {
@@ -36,7 +73,7 @@ function Footer({ local }) {
             <div className="flex justify-between items-start ">
               <h1 className="w-1/3 leading-[80px] text-white text-[60px] font-bold uppercase ">
                 {t("start")}
-              
+
                 {t("your_journey")}
                 <br />
                 {t("with_eci_group")}
@@ -109,7 +146,7 @@ function Footer({ local }) {
 
               {/* Start Social Medya */}
               <div className="">
-                <p className="text-lg text-white w-full text-center mb-8">
+                <p className={`text-lg text-white w-full text-center mb-8`}>
                   {t("follow_us")}
                 </p>
                 <div className="flex items-center justify-end gap-5 mt-5">
@@ -127,7 +164,7 @@ function Footer({ local }) {
                   </Link>
                   <Link
                     href={
-                      local == "res"
+                      local == "rus"
                         ? "https://www.instagram.com/ecigroupint?igsh=d2hjbW05amdleTNi&utm_source=qr"
                         : "https://www.instagram.com/ecigrouptr?igsh=MWswaTBhazl2a3o1Yw%3D%3D&utm_source=qr"
                     }
@@ -230,13 +267,13 @@ function Footer({ local }) {
 
               {/* Start Social Medya */}
               <div className="mr-3">
-                <p className="text-xl text-white w-full text-center">
-                  {t("follow_us")}
+                <p className={`${local == "rus" ? "text-sm"  : "text-xl" } text-white w-full text-center`}>
+                  {t("follow_us")} 
                 </p>
-                <div className="flex items-center justify-between gap-5 mt-2">
+                <div className={`${local == "rus" ? "gap-4 justify-end " : " gap-5 justify-between"} flex items-center mt-2`}>
                   <Link
                     href={
-                      local == "res"
+                      local == "rus"
                         ? "https://www.instagram.com/ecigroupint?igsh=d2hjbW05amdleTNi&utm_source=qr"
                         : "https://www.instagram.com/ecigrouptr?igsh=MWswaTBhazl2a3o1Yw%3D%3D&utm_source=qr"
                     }

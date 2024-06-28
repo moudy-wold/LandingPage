@@ -21,7 +21,7 @@ function Steps({ local }) {
             <p className="text-base lg:w-1/2 uppercase">{t("desc_in_steps")}</p>
           </div>
           <div className="lg:grid grid-cols-2 gap-5 mt-5 lg:mt-10">
-            <div className="mt-[10px] rounded-2xl border-[1px] border-black p-5 cursor-pointer relative flex items-end justify-between h-48 overflow-hidden transition-all duration-200 [&>div]:hover:right-0">
+            <div className="mt-[10px] rounded-2xl border-[1px] border-black p-5 cursor-pointer relative z-50 flex items-end justify-between h-48 overflow-hidden transition-all duration-200 [&>div]:hover:right-0">
               <p className="text-base uppercase">{t("contact_our_advisors")}</p>
               <p className="text-[110px]  font-semibold leading-[80px] uppercase">
                 01
@@ -32,7 +32,7 @@ function Steps({ local }) {
                 </p>
               </div>
             </div>
-            <div className="mt-[10px] rounded-2xl border-[1px] border-black p-5 cursor-pointer relative flex items-end justify-between h-48 overflow-hidden transition-all duration-200 [&>div]:hover:left-0">
+            <div className="mt-[10px] rounded-2xl border-[1px] border-black p-5 cursor-pointer relative z-50 flex items-end justify-between h-48 overflow-hidden transition-all duration-200 [&>div]:hover:left-0">
               <p className="text-base uppercase">{t("select_univercity")}</p>
               <p className="text-[110px]  font-semibold leading-[80px] uppercase">
                 02
@@ -43,27 +43,27 @@ function Steps({ local }) {
                 </p>
               </div>
             </div>
-            <div className="mt-[10px] rounded-2xl border-[1px] border-black p-5 cursor-pointer relative flex items-end justify-between h-48 overflow-hidden transition-all duration-200 [&>div]:hover:bottom-0">
+            <div className="mt-[10px] rounded-2xl border-[1px] border-black p-5 cursor-pointer relative z-50 flex items-end justify-between h-48 overflow-hidden transition-all duration-200 [&>div]:hover:bottom-0">
               <p className="text-[110px]  font-semibold leading-[80px] uppercase">
                 03
               </p>
               <p className="text-base uppercase">
                 {t("prepare_and_submit_documents")}
               </p>
-              <div className="absolute w-full h-full left-0 -bottom-[100%] bg-[#110F0F] transition-all duration-200 p-5 flex items-end justify-end">
+              <div className="absolute w-full h-full z-0 left-0 -bottom-[200%] bg-[#110F0F] transition-all duration-200 p-5 flex items-end justify-end">
                 <p className="text-white w-1/2 uppercase">
                   {t("desc_prepare_and_submit_documents")}
                 </p>
               </div>
             </div>
-            <div className="mt-[10px] rounded-2xl border-[1px] border-black p-5 cursor-pointer relative flex items-end justify-between h-48 overflow-hidden transition-all duration-200 [&>div]:hover:bottom-0">
+            <div className="mt-[10px] rounded-2xl border-[1px] border-black p-5 cursor-pointer relative z-50 flex items-end justify-between h-48 overflow-hidden transition-all duration-200 [&>div]:hover:bottom-0">
               <p className="text-[110px]  font-semibold leading-[80px] uppercase">
                 04
               </p>
               <p className="text-base uppercase">
                 {t("receive_acceptance_and_finalize")}
               </p>
-              <div className="absolute w-full h-full left-0 -bottom-[100%] bg-[#110F0F] transition-all duration-200 p-5 flex items-end justify-end">
+              <div className="absolute w-full h-full z-0 left-0 -bottom-[200%] bg-[#110F0F] transition-all duration-200 p-5 flex items-end justify-end">
                 <p className="text-white w-1/2 uppercase">
                   {t("desc_receive_acceptance_and_finalize")}
                 </p>
