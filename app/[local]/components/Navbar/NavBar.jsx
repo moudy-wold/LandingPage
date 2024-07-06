@@ -95,7 +95,7 @@ function NavBar({ local }) {
             <div className="hidden lg:block">
             <Link href="/" className="">
               <Image
-                src="/assets/logo.svg"
+                src="/assets/Logo/logo.png"
                 alt="logo"
                 width={240}
                 height={90}
@@ -107,11 +107,11 @@ function NavBar({ local }) {
             <div className="block lg:hidden">
             <Link href="/" className="">
               <Image
-                src="/assets/logo.svg"
+                src="/assets/Logo/logo.png"
                 alt="logo"
-                width={100}
-                height={32}
-                className="!w-[85%] md:!w-[60%]"
+                width={160}
+                height={52}
+                className=""
               />
               </Link>
             </div>

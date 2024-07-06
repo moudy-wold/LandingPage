@@ -16,8 +16,7 @@ export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
 }
 
-export default function RootLayout({  params: { local },children }) {
-  console.log(local,"lng")
+export default function RootLayout({  params: { local },children }) {  
   return (
     <html lang={local} dir={dir(local)}>
       <body className="">
