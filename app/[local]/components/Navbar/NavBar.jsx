@@ -109,8 +109,8 @@ function NavBar({ local }) {
               <Image
                 src="/assets/Logo/logo.png"
                 alt="logo"
-                width={160}
-                height={52}
+                width={140}
+                height={42}
                 className=""
               />
               </Link>

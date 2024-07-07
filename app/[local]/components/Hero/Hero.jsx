@@ -163,7 +163,7 @@ function Hero({ local }) {
                 </h1>
               </div>
               <div className="bg-white border-[2px] border-[#6D2663] rounded-3xl flex items-end justify-center p-4">
-                <p className="text-black text-xs  ">
+                <p className={`text-black ${local == "rus" ? "text-[10px]":" text-xs"}  `} >
                   {t("our_specialties")} <br />
                   200+
                 </p>

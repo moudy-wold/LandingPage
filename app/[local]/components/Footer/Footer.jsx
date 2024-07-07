@@ -268,7 +268,8 @@ function Footer({ local }) {
               {/* Start Social Medya */}
               <div className="mr-3">
                 <p className={`${local == "rus" ? "text-sm"  : "text-xl" } text-white w-full text-center`}>
-                  {t("follow_us")} 
+                  {local  == "rus"  ? "Follow Us"  : t("follow_us") }
+                  
                 </p>
                 <div className={`${local == "rus" ? "gap-4 justify-end " : " gap-5 justify-between"} flex items-center mt-2`}>
                   <Link

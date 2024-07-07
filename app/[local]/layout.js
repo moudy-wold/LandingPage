@@ -6,6 +6,7 @@ import { dir } from "i18next";
 import NavBar from "./components/Navbar/NavBar";
 import Footer from './components/Footer/Footer';
 import WhatsAppButton from "./components/WhatsppButton/WhatsAppButton.jsx"
+
 export const metadata = {
   title: "ECI group",
   description: "ECI group",
