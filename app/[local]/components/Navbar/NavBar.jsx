@@ -39,6 +39,7 @@ function NavBar({ local }) {
         : setInHome(true);
     }
   }, [pathName]);
+
   const handleMoveToSection = (id) => {    
     setOpenBurgerMenu(false);
     setTab(id);
@@ -72,6 +73,7 @@ function NavBar({ local }) {
     }
     setTab(0);
   };
+  
   const handleLocaleChange = (newLocale) => {
     if (!currentPathname) return;
     const pathWithoutLocale = currentPathname.replace(/^\/[^\/]+/, "");
@@ -197,7 +199,7 @@ function NavBar({ local }) {
               <div className="w-[103px] lg:w-[110px] flex items-center justify-end ">
                 <Link
                   href="/contact-us"
-                  className="w-fit text-white text-xs lg:text-base uppercase px-1 lg:px-2 py-1 rounded-xl bg-[#110F0F] hover:bg-[#14BDC6] transition-all duration-200"
+                  className={`w-fit text-white ${local == "en" ? "text-[10px]" :" text-xs"} lg:text-base uppercase px-1 lg:px-2 py-1 rounded-xl bg-[#110F0F] hover:bg-[#14BDC6] transition-all duration-200`}
                 >
                   {t("contact_us")}
                 </Link>
